@@ -11,7 +11,7 @@ const products=[
   { name: "Women sweatShirt Hoodie", category: "Hoodies", price: 2400, image: "product_images/h02.jpg" },
   { name: "Navy Blue Hoodie", category: "Hoodies", price: 2600, image: "product_images/h003.jpg" },
   { name: "Ticticimimi Women's Hoodie", category: "Hoodies", price: 2650, image: "product_images/h004.jpg" },
-  { name: "Gildan Adult Fleece Hoodie", category: "Hoodies", price: 2400, image: "product_images/h0005.jpg" },
+  { name: "Gildan Fleece Hoodie", category: "Hoodies", price: 2400, image: "product_images/h0005.jpg" },
   
 // Shoes 
   { name: "Running Shoes", category: "Shoes", price: 4000, image: "product_images/shoes1.jpg" },
@@ -39,7 +39,7 @@ function displayProducts(productList){
     // Loop through product list and create cards
     productList.forEach(product => {
         product_container.innerHTML += `
-<div class="col-sm-2 mb-0 mt-0 ">
+<div class="col product-wrapper mb-3 ">
 <div class="card product-card">
 <img src="${product.image}" class="card-img-top" alt="${product.name}">
 <div class="card-body">
@@ -68,5 +68,3 @@ const filterProducts = products.filter(product =>
 //display filter products
 displayProducts(filterProducts);
 });
-
-
